@@ -1,0 +1,241 @@
+/* === Global Styles === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* === Navbar === */
+.navbar {
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.85);
+    color: #ff9a9e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links li {
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* === Main Container === */
+.manager-container {
+  
+    padding-bottom: 3rem; /* Creates space below the sticky navbar */
+    backdrop-filter: blur(8px);
+    animation: slideUp 1.5s ease-in-out;
+}
+
+/* === Role Selector Card === */
+.role-selector {
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.role-selector:hover {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    transform: scale(1.08);
+    color: #111;
+}
+
+/* === Form === */
+.menu-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.menu-form input {
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: none;
+    width: 180px;
+    transition: box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);;
+}
+
+.menu-form input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    outline: none;
+}
+
+.menu-form button {
+    padding: 0.6rem 1rem;
+    border: none;
+    background-color: #5a4b98;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-form button:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+/* === Menu Grid === */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    animation: fadeIn 1.5s ease-in-out;
+  
+}
+
+.menu-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(201, 32, 32, 0.37);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 1s ease-in-out;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.5);
+}
+
+/* === Delete Button === */
+.delete-btn {
+    margin-top: 1rem;
+    background-color: #dc3545;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+.role-card {
+    width: 70%;
+    margin: 0 auto;
+   
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(26, 25, 25, 0.3);
+    text-align: center;
+    animation: zoomIn 1s ease;
+}
+.role-selector {
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Pinkish gradient */
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.role-selector {
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Pinkish gradient */
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.role-selector:hover {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* Lighter pinkish gradient */
+    transform: scale(1.08);
+    color: #111;
+}
+
+/* Style for dropdown options */
+.role-selector option {
+    background-color: #ff9a9e; /* Pinkish background for options */
+    color: #fff; /* White text for contrast */
+    font-weight: bold;
+    padding: 0.5rem;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.role-selector option {
+    background-color: #fad0c4; /* Lighter pinkish background on hover */
+    color: #000; /* Black text for better readability */
+}
